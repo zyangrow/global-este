@@ -21,7 +21,7 @@ const GallerySection = () => {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    <section id="galeria" className="py-16 md:py-24 bg-secondary/50">
+    <section id="galeria" className="py-16 md:py-24 bg-primary text-primary-foreground">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,10 +29,10 @@ const GallerySection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground mb-4">
-            Nuestra <span className="text-primary">Galería</span>
+          <h2 className="font-heading font-black text-3xl md:text-4xl text-primary-foreground mb-4">
+            Nuestra <span className="text-accent">Galería</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-primary-foreground/70 max-w-xl mx-auto">
             Descubre algunos de nuestros trabajos más recientes.
           </p>
         </motion.div>
