@@ -1,14 +1,24 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
 
-const areas = [
-  "Madrid Centro", "Alcobendas", "Pozuelo de Alarcón", "Las Rozas",
-  "Majadahonda", "Boadilla del Monte", "Tres Cantos", "San Sebastián de los Reyes",
-  "Torrelodones", "Villanueva de la Cañada", "Brunete", "Villanueva del Pardillo",
+export const areas = [
+  { slug: "madrid-centro", name: "Madrid Centro" },
+  { slug: "alcobendas", name: "Alcobendas" },
+  { slug: "pozuelo-de-alarcon", name: "Pozuelo de Alarcón" },
+  { slug: "las-rozas", name: "Las Rozas" },
+  { slug: "majadahonda", name: "Majadahonda" },
+  { slug: "boadilla-del-monte", name: "Boadilla del Monte" },
+  { slug: "tres-cantos", name: "Tres Cantos" },
+  { slug: "san-sebastian-de-los-reyes", name: "San Sebastián de los Reyes" },
+  { slug: "torrelodones", name: "Torrelodones" },
+  { slug: "villanueva-de-la-canada", name: "Villanueva de la Cañada" },
+  { slug: "brunete", name: "Brunete" },
+  { slug: "villanueva-del-pardillo", name: "Villanueva del Pardillo" },
 ];
 
 const AreasSection = () => (
-  <section id="areas" className="py-16 md:py-24 bg-secondary/50">
+  <section id="areas" className="py-16 md:py-24 bg-primary text-primary-foreground">
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -16,10 +26,10 @@ const AreasSection = () => (
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h2 className="font-heading font-black text-3xl md:text-4xl text-foreground mb-4">
-          Áreas de <span className="text-primary">Servicio</span>
+        <h2 className="font-heading font-black text-3xl md:text-4xl text-primary-foreground mb-4">
+          Áreas de <span className="text-accent">Servicio</span>
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">
+        <p className="text-primary-foreground/70 max-w-xl mx-auto">
           Damos servicio en Madrid y alrededores. Consulta si llegamos a tu zona.
         </p>
       </motion.div>
@@ -28,15 +38,19 @@ const AreasSection = () => (
         <div className="grid grid-cols-2 gap-3">
           {areas.map((area, i) => (
             <motion.div
-              key={area}
+              key={area.slug}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.04 }}
-              className="flex items-center gap-2 glass-card px-4 py-3"
             >
-              <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-              <span className="text-foreground text-sm font-medium">{area}</span>
+              <Link
+                to={`/areas/${area.slug}`}
+                className="flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/15 rounded-xl px-4 py-3 hover:bg-primary-foreground/20 transition-colors"
+              >
+                <MapPin className="w-4 h-4 text-accent flex-shrink-0" />
+                <span className="text-primary-foreground text-sm font-medium">{area.name}</span>
+              </Link>
             </motion.div>
           ))}
         </div>

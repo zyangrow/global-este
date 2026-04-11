@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import ServicePage from "./pages/ServicePage.tsx";
+import AreaPage from "./pages/AreaPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -18,6 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/servicios/:slug" element={<ServicePage />} />
+          <Route path="/areas/:slug" element={<AreaPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
