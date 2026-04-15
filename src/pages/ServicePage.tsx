@@ -8,35 +8,35 @@ import MobileCTA from "@/components/MobileCTA";
 import { services } from "@/components/ServicesSection";
 
 const serviceDetails: Record<string, { benefits: string[]; steps: string[]; longDesc: string }> = {
-  mantenimiento: {
-    longDesc: "Nuestro servicio de mantenimiento de jardines incluye corte de césped, limpieza de parterres, fertilización, control de plagas y todo lo necesario para mantener tu jardín en perfecto estado durante todo el año.",
-    benefits: ["Jardín impecable todo el año", "Ahorro de tiempo y esfuerzo", "Aumento del valor de tu propiedad", "Planes personalizados según necesidades"],
-    steps: ["Visita gratuita y evaluación del jardín", "Plan de mantenimiento personalizado", "Ejecución periódica y seguimiento"],
+  reformas: {
+    longDesc: "Nuestro servicio de reformas integrales incluye cocinas, baños, salones y locales comerciales. Nos encargamos de todo: diseño, obra, instalaciones y acabados para que no tengas que preocuparte de nada.",
+    benefits: ["Reforma llave en mano", "Diseño personalizado", "Materiales de primera calidad", "Cumplimiento de plazos"],
+    steps: ["Visita gratuita y presupuesto detallado", "Diseño y planificación de la obra", "Ejecución y entrega impecable"],
   },
-  diseno: {
-    longDesc: "Creamos jardines únicos que reflejan tu estilo. Desde la planificación hasta la ejecución, diseñamos espacios verdes funcionales y estéticamente impresionantes.",
-    benefits: ["Diseño personalizado y único", "Plantas adaptadas al clima local", "Optimización del espacio disponible", "Visualización 3D del proyecto"],
-    steps: ["Consulta y análisis del espacio", "Propuesta de diseño con visualización", "Ejecución del proyecto completo"],
+  electricidad: {
+    longDesc: "Realizamos todo tipo de instalaciones eléctricas: cuadros eléctricos, cableado, iluminación, automatización y certificados. Electricistas autorizados con garantía total.",
+    benefits: ["Electricistas certificados", "Cumplimiento normativa vigente", "Ahorro energético garantizado", "Servicio de urgencias 24h"],
+    steps: ["Diagnóstico y evaluación eléctrica", "Propuesta técnica y presupuesto", "Instalación y certificación"],
   },
-  poda: {
-    longDesc: "Realizamos podas profesionales de árboles y setos con técnicas especializadas para garantizar la salud y estética de tus plantas.",
-    benefits: ["Mejora la salud de los árboles", "Prevención de riesgos", "Estética y forma perfecta", "Recogida y limpieza incluida"],
-    steps: ["Inspección y diagnóstico", "Poda con técnicas profesionales", "Limpieza total del área"],
+  fontaneria: {
+    longDesc: "Servicio completo de fontanería: reparación de fugas, instalación de sanitarios, tuberías, calentadores y sistemas de agua. Respuesta rápida y trabajo limpio.",
+    benefits: ["Reparaciones urgentes", "Instalación de sanitarios", "Detección de fugas", "Garantía en todos los trabajos"],
+    steps: ["Diagnóstico del problema", "Presupuesto sin compromiso", "Reparación o instalación profesional"],
   },
-  riego: {
-    longDesc: "Instalamos sistemas de riego automático eficientes que ahorran agua y mantienen tu jardín perfectamente hidratado sin esfuerzo.",
-    benefits: ["Ahorro de hasta un 40% de agua", "Riego uniforme y programable", "Menor mantenimiento diario", "Compatible con domótica"],
-    steps: ["Estudio del terreno y necesidades", "Diseño del sistema de riego", "Instalación y programación"],
+  pintura: {
+    longDesc: "Pintura interior y exterior con acabados profesionales. Usamos pinturas de máxima calidad para un resultado duradero y estético que transforma tu espacio.",
+    benefits: ["Acabados impecables", "Pinturas ecológicas disponibles", "Preparación de superficies incluida", "Limpieza total al finalizar"],
+    steps: ["Preparación y protección del espacio", "Aplicación profesional de pintura", "Revisión final y limpieza"],
   },
-  cesped: {
-    longDesc: "Instalamos césped natural de la mejor calidad y césped artificial de última generación para que disfrutes de un jardín verde todo el año.",
-    benefits: ["Verde perfecto todo el año", "Bajo mantenimiento (artificial)", "Resistente al uso intensivo", "Instalación rápida y profesional"],
-    steps: ["Preparación del terreno", "Selección del tipo de césped", "Instalación profesional"],
+  albanileria: {
+    longDesc: "Obras de albañilería profesional: alicatados, solados, tabiques, reformas estructurales y trabajos de mampostería con la mejor calidad.",
+    benefits: ["Trabajo preciso y limpio", "Materiales de calidad", "Experiencia en todo tipo de obras", "Presupuesto cerrado"],
+    steps: ["Evaluación de la obra necesaria", "Planificación y materiales", "Ejecución profesional"],
   },
-  limpieza: {
-    longDesc: "Servicio profesional de limpieza de exteriores: terrazas, patios, fachadas, caminos y más. Devolvemos el brillo original a tus superficies.",
-    benefits: ["Superficies como nuevas", "Eliminación de manchas y musgo", "Tratamiento antiresbalante", "Protección duradera"],
-    steps: ["Evaluación de superficies", "Limpieza con equipos profesionales", "Tratamiento protector"],
+  climatizacion: {
+    longDesc: "Instalación y mantenimiento de sistemas de climatización: aire acondicionado, calefacción, bombas de calor y suelo radiante para el máximo confort en tu hogar.",
+    benefits: ["Eficiencia energética", "Marcas líderes del mercado", "Mantenimiento incluido", "Instalación rápida y limpia"],
+    steps: ["Estudio de necesidades climáticas", "Selección del equipo adecuado", "Instalación y puesta en marcha"],
   },
 };
 
@@ -57,7 +57,6 @@ const ServicePage = () => {
     <>
       <Navbar />
       <main>
-        {/* Hero */}
         <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
           <div className="absolute inset-0">
             <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
@@ -78,12 +77,11 @@ const ServicePage = () => {
           </div>
           <div className="absolute bottom-0 left-0 w-full">
             <svg viewBox="0 0 1440 80" fill="none" className="w-full">
-              <path d="M0,40 C360,90 1080,0 1440,40 L1440,80 L0,80 Z" fill="hsl(120,20%,98%)" />
+              <path d="M0,40 C360,90 1080,0 1440,40 L1440,80 L0,80 Z" fill="hsl(210,20%,98%)" />
             </svg>
           </div>
         </section>
 
-        {/* Description */}
         <section className="py-16 bg-background">
           <div className="container max-w-3xl">
             <motion.p
@@ -97,7 +95,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* Benefits */}
         <section className="py-16 bg-secondary/50">
           <div className="container max-w-3xl">
             <h2 className="font-heading font-black text-2xl md:text-3xl text-foreground mb-8">
@@ -121,7 +118,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* Process */}
         <section className="py-16 bg-background">
           <div className="container max-w-3xl">
             <h2 className="font-heading font-black text-2xl md:text-3xl text-foreground mb-8">
@@ -147,7 +143,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* CTA */}
         <section className="py-16 bg-primary text-center">
           <div className="container">
             <h2 className="font-heading font-black text-3xl text-primary-foreground mb-6">
@@ -161,7 +156,7 @@ const ServicePage = () => {
                 Pide Presupuesto Gratis
               </a>
               <a
-                href="tel:+34603042314"
+                href="tel:+34612345678"
                 className="inline-flex items-center gap-2 border-2 border-primary-foreground/40 text-primary-foreground font-heading font-semibold px-8 py-4 rounded-full hover:bg-primary-foreground/10 transition-all"
               >
                 <Phone className="w-5 h-5" /> Llamar

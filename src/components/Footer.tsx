@@ -6,21 +6,21 @@ const Footer = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
         <div>
           <h3 className="font-heading font-extrabold text-xl text-primary-foreground mb-4">
-            VIVEROS <span className="text-accent">VERAVIV</span>
+            CONSTRUCT<span className="text-accent">IP</span>
           </h3>
           <p className="text-sm leading-relaxed">
-            Jardineros profesionales con más de 30 años de experiencia. Tu jardín en las mejores manos.
+            Profesionales de la construcción y electricidad con más de 15 años de experiencia. Tu hogar en las mejores manos.
           </p>
         </div>
 
         <div>
           <h4 className="font-heading font-bold text-primary-foreground mb-4">Servicios</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="/servicios/mantenimiento" className="hover:text-accent transition-colors">Mantenimiento</a></li>
-            <li><a href="/servicios/diseno" className="hover:text-accent transition-colors">Diseño</a></li>
-            <li><a href="/servicios/poda" className="hover:text-accent transition-colors">Poda</a></li>
-            <li><a href="/servicios/riego" className="hover:text-accent transition-colors">Riego</a></li>
-            <li><a href="/servicios/cesped" className="hover:text-accent transition-colors">Césped</a></li>
+            <li><a href="/servicios/reformas" className="hover:text-accent transition-colors">Reformas</a></li>
+            <li><a href="/servicios/electricidad" className="hover:text-accent transition-colors">Electricidad</a></li>
+            <li><a href="/servicios/fontaneria" className="hover:text-accent transition-colors">Fontanería</a></li>
+            <li><a href="/servicios/pintura" className="hover:text-accent transition-colors">Pintura</a></li>
+            <li><a href="/servicios/albanileria" className="hover:text-accent transition-colors">Albañilería</a></li>
           </ul>
         </div>
 
@@ -37,11 +37,11 @@ const Footer = () => (
         <div>
           <h4 className="font-heading font-bold text-primary-foreground mb-4">Contacto</h4>
           <div className="space-y-3 text-sm">
-            <a href="tel:+34603042314" className="flex items-center gap-2 hover:text-accent transition-colors">
-              <Phone className="w-4 h-4" /> 603 04 23 14
+            <a href="tel:+34612345678" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <Phone className="w-4 h-4" /> 612 34 56 78
             </a>
-            <a href="mailto:info@viverosveraviv.es" className="flex items-center gap-2 hover:text-accent transition-colors">
-              <Mail className="w-4 h-4" /> info@viverosveraviv.es
+            <a href="mailto:info@constructip.es" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <Mail className="w-4 h-4" /> info@constructip.es
             </a>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" /> Madrid y alrededores
@@ -51,7 +51,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-primary-foreground/10 pt-6 text-center text-xs">
-        <p>© {new Date().getFullYear()} Viveros Veraviv. Todos los derechos reservados.</p>
+        <p>© {new Date().getFullYear()} Constructip. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>

@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-import serviceMantenimiento from "@/assets/service-mantenimiento.jpg";
-import serviceDiseno from "@/assets/service-diseno.jpg";
-import servicePoda from "@/assets/service-poda.jpg";
-import serviceRiego from "@/assets/service-riego.jpg";
-import serviceCesped from "@/assets/service-cesped.jpg";
-import serviceLimpieza from "@/assets/service-limpieza.jpg";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
+import gallery5 from "@/assets/gallery-5.jpg";
+import gallery6 from "@/assets/gallery-6.jpg";
 
 const images = [
-  { src: serviceMantenimiento, alt: "Mantenimiento de jardines" },
-  { src: serviceDiseno, alt: "Diseño de paisaje" },
-  { src: servicePoda, alt: "Poda profesional" },
-  { src: serviceRiego, alt: "Sistema de riego" },
-  { src: serviceCesped, alt: "Césped artificial" },
-  { src: serviceLimpieza, alt: "Limpieza exterior" },
+  { src: gallery1, alt: "Reforma de baño" },
+  { src: gallery2, alt: "Instalación eléctrica" },
+  { src: gallery3, alt: "Reforma de cocina" },
+  { src: gallery4, alt: "Reforma de salón" },
+  { src: gallery5, alt: "Terraza exterior" },
+  { src: gallery6, alt: "Pintura decorativa" },
 ];
 
 const GallerySection = () => {
@@ -33,26 +33,26 @@ const GallerySection = () => {
             Nuestra <span className="text-accent">Galería</span>
           </h2>
           <p className="text-primary-foreground/70 max-w-xl mx-auto">
-            Descubre algunos de nuestros trabajos más recientes.
+            Algunos de nuestros trabajos recientes de construcción y electricidad.
           </p>
         </motion.div>
 
-        <div className="columns-2 md:columns-3 gap-4 space-y-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((img, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="break-inside-avoid cursor-pointer overflow-hidden rounded-xl group"
+              transition={{ delay: i * 0.08 }}
+              className="overflow-hidden rounded-xl cursor-pointer group"
               onClick={() => setSelected(i)}
             >
               <img
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </motion.div>
           ))}
@@ -65,20 +65,23 @@ const GallerySection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-foreground/90 flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-foreground/90 flex items-center justify-center p-4"
             onClick={() => setSelected(null)}
           >
-            <button className="absolute top-6 right-6 text-primary-foreground" onClick={() => setSelected(null)}>
-              <X className="w-8 h-8" />
-            </button>
             <motion.img
-              initial={{ scale: 0.9 }}
+              initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
+              exit={{ scale: 0.8 }}
               src={images[selected].src}
               alt={images[selected].alt}
-              className="max-w-full max-h-[85vh] rounded-xl object-contain"
+              className="max-w-full max-h-[85vh] rounded-2xl shadow-2xl"
             />
+            <button
+              onClick={() => setSelected(null)}
+              className="absolute top-6 right-6 text-primary-foreground p-2"
+            >
+              <X className="w-8 h-8" />
+            </button>
           </motion.div>
         )}
       </AnimatePresence>

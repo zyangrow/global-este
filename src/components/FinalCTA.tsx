@@ -16,7 +16,7 @@ const FinalCTA = () => (
         viewport={{ once: true }}
       >
         <h2 className="font-heading font-black text-3xl md:text-5xl text-primary-foreground mb-6">
-          ¿Listo para transformar tu jardín?
+          ¿Listo para reformar tu hogar?
         </h2>
         <p className="text-primary-foreground/80 text-lg max-w-xl mx-auto mb-8">
           Solicita tu presupuesto gratuito y sin compromiso. Te respondemos en menos de 24 horas.
@@ -29,7 +29,7 @@ const FinalCTA = () => (
             Pide Presupuesto Gratis
           </a>
           <a
-            href="tel:+34603042314"
+            href="tel:+34612345678"
             className="inline-flex items-center gap-2 border-2 border-primary-foreground/40 text-primary-foreground font-heading font-semibold text-base px-8 py-4 rounded-full hover:bg-primary-foreground/10 transition-all"
           >
             <Phone className="w-5 h-5" /> Llamar ahora

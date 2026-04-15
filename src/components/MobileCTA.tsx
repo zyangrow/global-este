@@ -9,7 +9,7 @@ const MobileCTA = () => (
       Presupuesto Gratis
     </a>
     <a
-      href="tel:+34603042314"
+      href="tel:+34612345678"
       className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center shadow-lg flex-shrink-0"
     >
       <Phone className="w-5 h-5" />

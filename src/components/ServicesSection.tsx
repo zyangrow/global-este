@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import serviceMantenimiento from "@/assets/service-mantenimiento.jpg";
-import serviceDiseno from "@/assets/service-diseno.jpg";
-import servicePoda from "@/assets/service-poda.jpg";
-import serviceRiego from "@/assets/service-riego.jpg";
-import serviceCesped from "@/assets/service-cesped.jpg";
-import serviceLimpieza from "@/assets/service-limpieza.jpg";
+import serviceReformas from "@/assets/service-reformas.jpg";
+import serviceElectricidad from "@/assets/service-electricidad.jpg";
+import serviceFontaneria from "@/assets/service-fontaneria.jpg";
+import servicePintura from "@/assets/service-pintura.jpg";
+import serviceAlbanileria from "@/assets/service-albañileria.jpg";
+import serviceClimatizacion from "@/assets/service-climatizacion.jpg";
 
 export const services = [
-  { slug: "mantenimiento", title: "Mantenimiento de Jardines", image: serviceMantenimiento, desc: "Cuidado integral de jardines residenciales y comerciales." },
-  { slug: "diseno", title: "Diseño de Jardines", image: serviceDiseno, desc: "Diseño personalizado de espacios verdes únicos." },
-  { slug: "poda", title: "Poda de Árboles y Setos", image: servicePoda, desc: "Poda profesional para la salud de tus plantas." },
-  { slug: "riego", title: "Sistemas de Riego", image: serviceRiego, desc: "Instalación de riego automático eficiente." },
-  { slug: "cesped", title: "Césped Natural y Artificial", image: serviceCesped, desc: "Instalación de césped de máxima calidad." },
-  { slug: "limpieza", title: "Limpieza de Exteriores", image: serviceLimpieza, desc: "Limpieza profesional de terrazas, patios y más." },
+  { slug: "reformas", title: "Reformas Integrales", image: serviceReformas, desc: "Reformas completas de viviendas, cocinas, baños y locales." },
+  { slug: "electricidad", title: "Instalaciones Eléctricas", image: serviceElectricidad, desc: "Instalación, reparación y mantenimiento eléctrico profesional." },
+  { slug: "fontaneria", title: "Fontanería", image: serviceFontaneria, desc: "Instalación y reparación de tuberías, grifos y sanitarios." },
+  { slug: "pintura", title: "Pintura y Decoración", image: servicePintura, desc: "Pintura interior y exterior con acabados profesionales." },
+  { slug: "albanileria", title: "Albañilería", image: serviceAlbanileria, desc: "Obras de albañilería, alicatados, solados y más." },
+  { slug: "climatizacion", title: "Climatización", image: serviceClimatizacion, desc: "Instalación de aire acondicionado y calefacción." },
 ];
 
 const ServicesSection = () => (
@@ -29,7 +29,7 @@ const ServicesSection = () => (
           Nuestros <span className="text-primary">Servicios</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Ofrecemos servicios integrales de jardinería y paisajismo para hogares y empresas.
+          Ofrecemos servicios integrales de construcción, electricidad y reformas para hogares y empresas.
         </p>
       </motion.div>
 

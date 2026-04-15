@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
 const reviews = [
-  { name: "María García", rating: 5, text: "Excelente trabajo. Mi jardín quedó espectacular. Muy profesionales y puntuales.", date: "Hace 2 semanas" },
-  { name: "Carlos López", rating: 5, text: "Llevan manteniendo mi jardín 3 años y siempre impecable. 100% recomendados.", date: "Hace 1 mes" },
-  { name: "Ana Martínez", rating: 5, text: "Instalaron el riego automático y funcionó perfecto desde el primer día. Gran equipo.", date: "Hace 2 meses" },
-  { name: "Pedro Sánchez", rating: 4, text: "Muy buen servicio de poda. Dejaron todo limpio y recogido. Repetiré seguro.", date: "Hace 3 meses" },
+  { name: "María García", rating: 5, text: "Excelente trabajo en la reforma de mi cocina. Muy profesionales y puntuales. Todo quedó perfecto.", date: "Hace 2 semanas" },
+  { name: "Carlos López", rating: 5, text: "Instalaron toda la electricidad de mi piso nuevo. Trabajo limpio e impecable. 100% recomendados.", date: "Hace 1 mes" },
+  { name: "Ana Martínez", rating: 5, text: "Repararon una fuga de agua urgente en fin de semana. Rapidísimos y muy profesionales.", date: "Hace 2 meses" },
+  { name: "Pedro Sánchez", rating: 4, text: "Muy buen servicio de pintura. Dejaron todo limpio y recogido. Repetiré seguro.", date: "Hace 3 meses" },
 ];
 
 const ReviewsSection = () => (
@@ -26,7 +26,7 @@ const ReviewsSection = () => (
           ))}
           <span className="font-heading font-bold text-xl text-foreground ml-2">4.9/5</span>
         </div>
-        <p className="text-muted-foreground">Basado en +120 reseñas de Google</p>
+        <p className="text-muted-foreground">Basado en +80 reseñas de Google</p>
       </motion.div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

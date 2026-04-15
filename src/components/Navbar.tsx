@@ -30,7 +30,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#inicio" className="font-heading font-extrabold text-xl md:text-2xl text-primary-foreground tracking-tight">
-          VIVEROS<span className="text-accent"> VERAVIV</span>
+          CONSTRUCT<span className="text-accent">IP</span>
         </a>
 
         <div className="hidden lg:flex items-center gap-8">
@@ -47,11 +47,11 @@ const Navbar = () => {
 
         <div className="flex items-center gap-3">
           <a
-            href="tel:+34603042314"
+            href="tel:+34612345678"
             className="hidden md:flex items-center gap-2 border border-primary-foreground/40 rounded-full px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10 transition-all"
           >
             <Phone className="w-4 h-4" />
-            603 04 23 14
+            612 34 56 78
           </a>
           <a
             href="#contacto"
@@ -89,10 +89,10 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="tel:+34603042314"
+                href="tel:+34612345678"
                 className="flex items-center gap-2 text-accent font-semibold"
               >
-                <Phone className="w-4 h-4" /> 603 04 23 14
+                <Phone className="w-4 h-4" /> 612 34 56 78
               </a>
               <a
                 href="#contacto"
