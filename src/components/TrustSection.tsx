@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Shield, Clock, Award, ThumbsUp } from "lucide-react";
 
 const trustPoints = [
-  { icon: Award, title: "+30 años", desc: "de experiencia acumulada" },
+  { icon: Award, title: "+15 años", desc: "de experiencia acumulada" },
   { icon: Clock, title: "Rapidez", desc: "Respuesta en menos de 24h" },
   { icon: Shield, title: "Garantía", desc: "En todos nuestros trabajos" },
   { icon: ThumbsUp, title: "5 estrellas", desc: "Valoración de clientes" },
@@ -17,9 +17,9 @@ const TrustSection = () => (
         viewport={{ once: true }}
         className="text-center text-primary-foreground/80 max-w-2xl mx-auto mb-12 text-lg"
       >
-        Viveros Veraviv es un equipo de jardineros profesionales con amplia experiencia
+        Constructip es un equipo de profesionales de la construcción y electricidad con amplia experiencia
         y un firme compromiso con la calidad. Nos dedicamos a conseguir resultados
-        excepcionales y a cuidar cada detalle de tu jardín.
+        excepcionales y a cuidar cada detalle de tu hogar.
       </motion.p>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

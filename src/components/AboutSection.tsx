@@ -23,13 +23,13 @@ const AboutSection = () => (
             Sobre <span className="text-primary">Nosotros</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Somos un equipo de jardineros profesionales con más de 30 años de experiencia acumulada.
-            Nos apasiona transformar espacios exteriores en lugares de ensueño.
+            Somos un equipo de profesionales de la construcción y electricidad con más de 15 años de experiencia.
+            Nos apasiona transformar hogares y espacios comerciales con la máxima calidad.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            Ofrecemos servicios integrales: mantenimiento de jardines residenciales y comerciales,
-            diseño y acondicionamiento de zonas verdes, poda de árboles y setos, instalación de
-            césped natural y artificial, así como sistemas de riego y limpieza de exteriores.
+            Ofrecemos servicios integrales: reformas completas, instalaciones eléctricas,
+            fontanería, pintura, albañilería y climatización. Cada proyecto lo tratamos
+            con la dedicación y el detalle que merece.
           </p>
           <a
             href="#contacto"

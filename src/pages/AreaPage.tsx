@@ -25,7 +25,6 @@ const AreaPage = () => {
     <>
       <Navbar />
       <main>
-        {/* Hero */}
         <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
           <div className="absolute inset-0">
             <img src={heroBg} alt={area.name} className="w-full h-full object-cover" />
@@ -39,42 +38,40 @@ const AreaPage = () => {
               <div className="flex items-center gap-3 mb-4">
                 <MapPin className="w-8 h-8 text-accent" />
                 <h1 className="font-heading font-black text-4xl md:text-5xl text-primary-foreground">
-                  Jardinería en {area.name}
+                  Construcción en {area.name}
                 </h1>
               </div>
               <p className="text-primary-foreground/80 text-lg max-w-2xl">
-                Servicio profesional de jardinería y paisajismo en {area.name} y alrededores.
+                Servicio profesional de construcción y electricidad en {area.name} y alrededores.
                 Presupuesto gratuito y sin compromiso.
               </p>
             </motion.div>
           </div>
           <div className="absolute bottom-0 left-0 w-full">
             <svg viewBox="0 0 1440 80" fill="none" className="w-full">
-              <path d="M0,40 C360,90 1080,0 1440,40 L1440,80 L0,80 Z" fill="hsl(120,20%,98%)" />
+              <path d="M0,40 C360,90 1080,0 1440,40 L1440,80 L0,80 Z" fill="hsl(210,20%,98%)" />
             </svg>
           </div>
         </section>
 
-        {/* Description */}
         <section className="py-16 bg-background">
           <div className="container max-w-3xl">
             <h2 className="font-heading font-black text-2xl md:text-3xl text-foreground mb-6">
-              Servicios de jardinería en <span className="text-primary">{area.name}</span>
+              Servicios de construcción en <span className="text-primary">{area.name}</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              En Viveros Veraviv ofrecemos todos nuestros servicios de jardinería profesional
-              en {area.name}. Con más de 30 años de experiencia, nuestro equipo se desplaza
-              hasta tu ubicación para transformar y mantener tu jardín en perfecto estado.
+              En Constructip ofrecemos todos nuestros servicios de construcción y electricidad profesional
+              en {area.name}. Con más de 15 años de experiencia, nuestro equipo se desplaza
+              hasta tu ubicación para reformar y mantener tu hogar en perfecto estado.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Desde mantenimiento periódico hasta proyectos completos de diseño paisajístico,
+              Desde reformas integrales hasta instalaciones eléctricas de urgencia,
               estamos preparados para cualquier reto. Solicita tu presupuesto gratuito y
               descubre por qué somos la opción preferida en {area.name}.
             </p>
           </div>
         </section>
 
-        {/* Services available */}
         <section className="py-16 bg-primary text-primary-foreground">
           <div className="container max-w-3xl">
             <h2 className="font-heading font-black text-2xl md:text-3xl mb-8">
@@ -102,11 +99,10 @@ const AreaPage = () => {
           </div>
         </section>
 
-        {/* CTA */}
         <section className="py-16 bg-background text-center">
           <div className="container">
             <h2 className="font-heading font-black text-3xl text-foreground mb-6">
-              ¿Necesitas un jardinero en <span className="text-primary">{area.name}</span>?
+              ¿Necesitas un profesional en <span className="text-primary">{area.name}</span>?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Contacta con nosotros y recibe un presupuesto personalizado sin compromiso.
@@ -119,7 +115,7 @@ const AreaPage = () => {
                 Pide Presupuesto Gratis
               </a>
               <a
-                href="tel:+34603042314"
+                href="tel:+34612345678"
                 className="inline-flex items-center gap-2 border-2 border-primary/30 text-primary font-heading font-semibold px-8 py-4 rounded-full hover:bg-primary/5 transition-all"
               >
                 <Phone className="w-5 h-5" /> Llamar

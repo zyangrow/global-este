@@ -13,7 +13,6 @@ const QuoteForm = () => {
 
     setLoading(true);
     try {
-      // Webhook placeholder - replace with your GoHighLevel webhook URL
       await fetch("https://hooks.example.com/webhook", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

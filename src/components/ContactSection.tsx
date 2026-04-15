@@ -26,23 +26,23 @@ const ContactSection = () => (
           viewport={{ once: true }}
           className="space-y-6"
         >
-          <a href="tel:+34603042314" className="flex items-center gap-4 glass-card p-5 hover:shadow-xl transition-shadow group">
+          <a href="tel:+34612345678" className="flex items-center gap-4 glass-card p-5 hover:shadow-xl transition-shadow group">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <Phone className="w-5 h-5 text-primary" />
             </div>
             <div>
               <p className="font-heading font-semibold text-foreground">Teléfono</p>
-              <p className="text-primary font-semibold">603 04 23 14</p>
+              <p className="text-primary font-semibold">612 34 56 78</p>
             </div>
           </a>
 
-          <a href="mailto:info@viverosveraviv.es" className="flex items-center gap-4 glass-card p-5 hover:shadow-xl transition-shadow group">
+          <a href="mailto:info@constructip.es" className="flex items-center gap-4 glass-card p-5 hover:shadow-xl transition-shadow group">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <Mail className="w-5 h-5 text-primary" />
             </div>
             <div>
               <p className="font-heading font-semibold text-foreground">Email</p>
-              <p className="text-primary font-semibold">info@viverosveraviv.es</p>
+              <p className="text-primary font-semibold">info@constructip.es</p>
             </div>
           </a>
 

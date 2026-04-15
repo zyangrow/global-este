@@ -7,11 +7,11 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "¿Cuánto cuesta el mantenimiento de un jardín?", a: "El precio depende del tamaño del jardín y los servicios necesarios. Ofrecemos presupuestos personalizados sin compromiso. Contáctanos para una valoración gratuita." },
+  { q: "¿Cuánto cuesta una reforma integral?", a: "El precio depende del tamaño y alcance de la reforma. Ofrecemos presupuestos personalizados sin compromiso. Contáctanos para una valoración gratuita." },
   { q: "¿Trabajan en fin de semana?", a: "Sí, nos adaptamos a tu horario. Podemos realizar trabajos en fines de semana y festivos según disponibilidad." },
-  { q: "¿Ofrecen servicio de urgencias?", a: "Sí, contamos con servicio de atención urgente para situaciones como caída de árboles o daños por tormentas." },
+  { q: "¿Ofrecen servicio de urgencias?", a: "Sí, contamos con servicio de atención urgente para averías eléctricas, fugas de agua y otras emergencias." },
   { q: "¿Qué garantía ofrecen en sus trabajos?", a: "Todos nuestros trabajos cuentan con garantía de calidad. Si no estás satisfecho, lo solucionamos sin coste adicional." },
-  { q: "¿Hacen trabajos para comunidades de vecinos?", a: "Sí, realizamos mantenimiento y diseño de jardines para comunidades, empresas y particulares." },
+  { q: "¿Hacen trabajos para comunidades de vecinos?", a: "Sí, realizamos todo tipo de obras y mantenimiento para comunidades, empresas y particulares." },
   { q: "¿Cuánto tardan en dar un presupuesto?", a: "Respondemos en menos de 24 horas. En la mayoría de casos, podemos dar una estimación el mismo día." },
 ];
 
