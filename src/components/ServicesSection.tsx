@@ -12,13 +12,13 @@ const ServicesSection = () => (
         viewport={{ once: true }}
         className="text-center mb-14"
       >
-        <span className="inline-block bg-primary/10 text-primary rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-3">
+        <span className="inline-block bg-white/15 backdrop-blur-sm text-white border border-white/25 rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-3">
           Lo que hacemos
         </span>
-        <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-foreground mb-3">
+        <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white mb-3 text-shadow-soft">
           Nuestros servicios
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">
+        <p className="text-white/85 max-w-xl mx-auto text-shadow-soft">
           Soluciones integrales de climatización, eficiencia energética y
           fontanería para tu hogar o negocio.
         </p>
