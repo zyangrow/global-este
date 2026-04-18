@@ -1,57 +1,84 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Phone, Mail, Clock } from "lucide-react";
+import logo from "@/assets/logo.png";
+import { COMPANY } from "@/data/contact";
+import { services } from "@/data/services";
+import { areas } from "@/data/areas";
+import ContactDialog from "./ContactDialog";
 
 const Footer = () => (
-  <footer className="bg-foreground text-primary-foreground/80 py-12">
+  <footer className="bg-primary-dark text-primary-foreground/80 pt-16 pb-8">
     <div className="container">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
         <div>
-          <h3 className="font-heading font-extrabold text-xl text-primary-foreground mb-4">
-            CONSTRUCT<span className="text-accent">IP</span>
-          </h3>
-          <p className="text-sm leading-relaxed">
-            Profesionales de la construcción y electricidad con más de 15 años de experiencia. Tu hogar en las mejores manos.
+          <img src={logo} alt={COMPANY.name} className="h-10 w-auto mb-4 brightness-0 invert" />
+          <p className="text-sm leading-relaxed mb-4">
+            Climatización integral, calderas, aerotermia y eficiencia energética en Sevilla y alrededores.
           </p>
+          <ContactDialog>
+            <button className="bg-accent text-accent-foreground font-heading font-bold text-xs uppercase px-5 py-2.5 rounded-full hover:bg-accent-dark transition-colors">
+              Contáctanos
+            </button>
+          </ContactDialog>
         </div>
 
         <div>
-          <h4 className="font-heading font-bold text-primary-foreground mb-4">Servicios</h4>
+          <h4 className="font-heading font-bold text-primary-foreground mb-4 uppercase text-sm tracking-wide">Nuestros Servicios</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="/servicios/reformas" className="hover:text-accent transition-colors">Reformas</a></li>
-            <li><a href="/servicios/electricidad" className="hover:text-accent transition-colors">Electricidad</a></li>
-            <li><a href="/servicios/fontaneria" className="hover:text-accent transition-colors">Fontanería</a></li>
-            <li><a href="/servicios/pintura" className="hover:text-accent transition-colors">Pintura</a></li>
-            <li><a href="/servicios/albanileria" className="hover:text-accent transition-colors">Albañilería</a></li>
+            {services.slice(0, 6).map((s) => (
+              <li key={s.slug}>
+                <Link to={`/servicios/${s.slug}`} className="hover:text-accent transition-colors">
+                  {s.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div>
-          <h4 className="font-heading font-bold text-primary-foreground mb-4">Enlaces</h4>
+          <h4 className="font-heading font-bold text-primary-foreground mb-4 uppercase text-sm tracking-wide">Áreas</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#inicio" className="hover:text-accent transition-colors">Inicio</a></li>
-            <li><a href="#servicios" className="hover:text-accent transition-colors">Servicios</a></li>
-            <li><a href="#galeria" className="hover:text-accent transition-colors">Galería</a></li>
-            <li><a href="#contacto" className="hover:text-accent transition-colors">Contacto</a></li>
+            {areas.map((a) => (
+              <li key={a.slug}>
+                <Link to={`/areas/${a.slug}`} className="hover:text-accent transition-colors">
+                  {a.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div>
-          <h4 className="font-heading font-bold text-primary-foreground mb-4">Contacto</h4>
-          <div className="space-y-3 text-sm">
-            <a href="tel:+34612345678" className="flex items-center gap-2 hover:text-accent transition-colors">
-              <Phone className="w-4 h-4" /> 612 34 56 78
+          <h4 className="font-heading font-bold text-primary-foreground mb-4 uppercase text-sm tracking-wide">Horario de atención</h4>
+          <div className="space-y-2 text-sm mb-5">
+            {["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"].map((d) => (
+              <div key={d} className="flex justify-between">
+                <span>{d}</span>
+                <span className="text-primary-foreground/60">{COMPANY.hours}</span>
+              </div>
+            ))}
+          </div>
+          <div className="space-y-2 text-sm">
+            <a href={`tel:${COMPANY.phoneTel}`} className="flex items-center gap-2 hover:text-accent transition-colors">
+              <Phone className="w-4 h-4 text-accent" /> {COMPANY.phoneDisplay}
             </a>
-            <a href="mailto:info@constructip.es" className="flex items-center gap-2 hover:text-accent transition-colors">
-              <Mail className="w-4 h-4" /> info@constructip.es
+            <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-2 hover:text-accent transition-colors">
+              <Mail className="w-4 h-4 text-accent" /> {COMPANY.email}
             </a>
             <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" /> Madrid y alrededores
+              <Clock className="w-4 h-4 text-accent" /> {COMPANY.hours}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-primary-foreground/10 pt-6 text-center text-xs">
-        <p>© {new Date().getFullYear()} Constructip. Todos los derechos reservados.</p>
+      <div className="border-t border-primary-foreground/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        <p>© {new Date().getFullYear()} {COMPANY.name}. Todos los derechos reservados.</p>
+        <div className="flex gap-5">
+          <Link to="/terms" className="hover:text-accent transition-colors">Términos y condiciones</Link>
+          <Link to="/privacy" className="hover:text-accent transition-colors">Política de privacidad</Link>
+          <Link to="/cookies" className="hover:text-accent transition-colors">Cookies</Link>
+        </div>
       </div>
     </div>
   </footer>
