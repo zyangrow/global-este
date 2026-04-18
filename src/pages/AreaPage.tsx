@@ -64,7 +64,7 @@ const AreaPage = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-accent/10">
+        <section className="py-16 md:py-20 bg-accent">
           <div className="container max-w-3xl">
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               En Global E.S.T.E. ofrecemos todos nuestros servicios de climatización en {area.name}.

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { services } from "@/data/services";
 
 const ServicesSection = () => (
-  <section id="servicios" className="py-20 md:py-28 bg-accent/10">
+  <section id="servicios" className="py-20 md:py-28 bg-accent">
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
