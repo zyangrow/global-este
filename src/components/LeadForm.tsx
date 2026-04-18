@@ -40,6 +40,8 @@ const LeadForm = ({
     try {
       await submitLead(form, formType);
       setSubmitted(true);
+      setForm({ name: "", phone: "", message: "" });
+      setAgreed(false);
     } finally {
       setLoading(false);
     }
@@ -53,7 +55,7 @@ const LeadForm = ({
           ¡Solicitud enviada!
         </h3>
         <p className={variant === "card" ? "text-primary-foreground/80" : "text-muted-foreground"}>
-          {successText}
+          Gracias, hemos recibido tu solicitud. Te contactaremos en breve.
         </p>
       </div>
     );

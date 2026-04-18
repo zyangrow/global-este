@@ -37,10 +37,10 @@ export async function submitLead(
     headers: { "Content-Type": "application/json" },
     mode: "no-cors",
     body: JSON.stringify({
-      formType,
       name: data.name.trim().slice(0, 100),
       phone: data.phone.trim().slice(0, 20),
       message: (data.message || "").trim().slice(0, 1000),
+      formType,
       source: typeof window !== "undefined" ? window.location.href : "",
       timestamp: new Date().toISOString(),
     }),

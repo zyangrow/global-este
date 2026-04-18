@@ -27,7 +27,7 @@ const ContactPage = () => (
         </div>
       </section>
 
-      <section className="pb-20 md:pb-28 bg-background">
+      <section className="pb-20 md:pb-28">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-10">
             <motion.div

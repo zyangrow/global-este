@@ -3,7 +3,16 @@ import teamImg from "@/assets/team.jpg";
 import QuoteDialog from "./QuoteDialog";
 
 const AboutSection = () => (
-  <section className="relative py-20 md:py-28 bg-background">
+  <section className="relative py-20 md:py-28">
+    {/* Darker teal overlay specific to this section, on top of global background */}
+    <div
+      className="absolute inset-0 pointer-events-none"
+      aria-hidden="true"
+      style={{
+        background:
+          "linear-gradient(180deg, hsla(189, 70%, 10%, 0.78) 0%, hsla(189, 65%, 14%, 0.72) 100%)",
+      }}
+    />
     <div className="container relative z-10">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <motion.div
@@ -20,18 +29,18 @@ const AboutSection = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block bg-primary/10 text-primary border border-primary/20 rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="inline-block bg-white/15 backdrop-blur-sm text-white border border-white/25 rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-4">
             Sobre nosotros
           </span>
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-foreground mb-6 leading-tight">
+          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white mb-6 leading-tight text-shadow-soft">
             Tu empresa de climatización de confianza en Sevilla
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+          <p className="text-white/90 text-lg leading-relaxed mb-4 text-shadow-soft">
             En Global E.S.T.E. somos especialistas en climatización y eficiencia
             energética. Llevamos años ayudando a familias y empresas a vivir y
             trabajar con el mejor confort, ahorrando en su factura.
           </p>
-          <p className="text-muted-foreground leading-relaxed mb-8">
+          <p className="text-white/85 leading-relaxed mb-8 text-shadow-soft">
             Trabajamos con las marcas líderes del sector y ofrecemos garantía
             total en cada instalación. Asesoramiento personalizado, presupuesto
             cerrado y servicio postventa para que solo te preocupes de disfrutar.
