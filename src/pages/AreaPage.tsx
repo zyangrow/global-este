@@ -11,6 +11,7 @@ import ReviewsSection from "@/components/ReviewsSection";
 import AreasSection from "@/components/AreasSection";
 import FinalCTA from "@/components/FinalCTA";
 import QuoteDialog from "@/components/QuoteDialog";
+import ParallaxSection from "@/components/ParallaxSection";
 import { areas } from "@/data/areas";
 import { services } from "@/data/services";
 import { COMPANY } from "@/data/contact";
@@ -83,10 +84,10 @@ const AreaPage = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-secondary/40">
+        <ParallaxSection className="py-16 md:py-20">
           <div className="container">
-            <h2 className="font-heading font-extrabold text-2xl md:text-3xl text-foreground mb-10 text-center">
-              Servicios disponibles en <span className="text-primary">{area.name}</span>
+            <h2 className="font-heading font-extrabold text-2xl md:text-3xl text-white mb-10 text-center [text-shadow:0_2px_8px_rgba(0,0,0,0.2)]">
+              Servicios disponibles en <span className="text-accent">{area.name}</span>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
               {services.map((s, i) => (
@@ -99,17 +100,16 @@ const AreaPage = () => {
                 >
                   <Link
                     to={`/servicios/${s.slug}`}
-                    className="flex items-center justify-between gap-3 bg-card rounded-2xl p-5 hover:bg-primary hover:text-primary-foreground transition-colors group shadow-card"
-                    style={{ boxShadow: "var(--shadow-card)" }}
+                    className="flex items-center justify-between gap-3 bg-card text-foreground rounded-2xl p-5 hover:bg-accent hover:text-accent-foreground transition-colors group shadow-xl border border-white/30"
                   >
                     <span className="font-heading font-semibold">{s.title}</span>
-                    <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
+                    <ArrowRight className="w-5 h-5 text-accent group-hover:text-accent-foreground flex-shrink-0" />
                   </Link>
                 </motion.div>
               ))}
             </div>
           </div>
-        </section>
+        </ParallaxSection>
 
         <GallerySection />
         <ReviewsSection />

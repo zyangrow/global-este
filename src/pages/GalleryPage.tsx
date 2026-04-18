@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import CookieBanner from "@/components/CookieBanner";
+import ParallaxSection from "@/components/ParallaxSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import AreasSection from "@/components/AreasSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -34,19 +35,19 @@ const GalleryPage = () => {
     <>
       <Navbar />
       <main>
-        <section className="pt-32 md:pt-40 pb-12 bg-background">
+        <ParallaxSection className="pt-32 md:pt-40 pb-12">
           <div className="container text-center">
-            <span className="inline-block bg-primary/10 text-primary rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-3">
+            <span className="inline-block bg-white/15 backdrop-blur-sm text-white border border-white/25 rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-3">
               Galería completa
             </span>
-            <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-foreground mb-4">
+            <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-white mb-4 [text-shadow:0_2px_8px_rgba(0,0,0,0.2)]">
               Nuestros trabajos
             </h1>
-            <p className="text-muted-foreground max-w-xl mx-auto">
+            <p className="text-white/85 max-w-xl mx-auto">
               Una selección de instalaciones realizadas por nuestro equipo en Sevilla y alrededores.
             </p>
           </div>
-        </section>
+        </ParallaxSection>
 
         <section className="pb-20 bg-background">
           <div className="container">
