@@ -47,7 +47,7 @@ const ServicePage = () => {
               </p>
               <div className="flex flex-wrap gap-3">
                 <QuoteDialog>
-                  <button className="bg-accent text-accent-foreground font-heading font-bold text-base uppercase px-8 py-4 rounded-full hover:bg-accent-dark transition-all btn-glow-accent">
+                  <button className="bg-primary-dark text-accent-foreground font-heading font-bold text-base uppercase px-8 py-4 rounded-full hover:bg-primary-dark-dark transition-all btn-glow-accent">
                     Pide Presupuesto
                   </button>
                 </QuoteDialog>
@@ -59,7 +59,7 @@ const ServicePage = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-accent">
+        <section className="py-16 md:py-20 bg-primary-dark">
           <div className="container max-w-3xl">
             <img src={service.image} alt={service.title} className="w-full h-72 md:h-96 object-cover rounded-3xl shadow-2xl mb-8" />
             <p className="text-lg text-muted-foreground leading-relaxed">{service.long}</p>
@@ -89,7 +89,7 @@ const ServicePage = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-accent">
+        <section className="py-16 md:py-20 bg-primary-dark">
           <div className="container max-w-3xl">
             <h2 className="font-heading font-extrabold text-2xl md:text-3xl text-foreground mb-10 text-center">
               Nuestro proceso

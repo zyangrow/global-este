@@ -17,7 +17,7 @@ const faqs = [
 ];
 
 const FAQSection = () => (
-  <section className="py-20 md:py-28 bg-accent">
+  <section className="py-20 md:py-28 bg-primary-dark">
     <div className="container">
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <motion.div

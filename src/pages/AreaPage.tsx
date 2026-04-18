@@ -52,7 +52,7 @@ const AreaPage = () => {
               </p>
               <div className="flex flex-wrap gap-3">
                 <QuoteDialog>
-                  <button className="bg-accent text-accent-foreground font-heading font-bold text-base uppercase px-8 py-4 rounded-full hover:bg-accent-dark transition-all btn-glow-accent">
+                  <button className="bg-primary-dark text-accent-foreground font-heading font-bold text-base uppercase px-8 py-4 rounded-full hover:bg-primary-dark-dark transition-all btn-glow-accent">
                     Pide Presupuesto
                   </button>
                 </QuoteDialog>
@@ -64,7 +64,7 @@ const AreaPage = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-accent">
+        <section className="py-16 md:py-20 bg-primary-dark">
           <div className="container max-w-3xl">
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               En Global E.S.T.E. ofrecemos todos nuestros servicios de climatización en {area.name}.
@@ -94,7 +94,7 @@ const AreaPage = () => {
                 >
                   <Link
                     to={`/servicios/${s.slug}`}
-                    className="flex items-center justify-between gap-3 bg-card rounded-2xl p-5 hover:bg-accent hover:text-accent-foreground transition-colors group shadow-xl border border-white/20"
+                    className="flex items-center justify-between gap-3 bg-card rounded-2xl p-5 hover:bg-primary-dark hover:text-accent-foreground transition-colors group shadow-xl border border-white/20"
                   >
                     <span className="font-heading font-semibold">{s.title}</span>
                     <ArrowRight className="w-5 h-5 text-accent group-hover:text-accent-foreground flex-shrink-0" />

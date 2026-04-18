@@ -22,7 +22,7 @@ const GallerySection = ({ showCta = true }: Props) => {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    <section id="galeria" className="py-20 md:py-28 bg-accent">
+    <section id="galeria" className="py-20 md:py-28 bg-primary-dark">
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
           <motion.div
@@ -40,7 +40,7 @@ const GallerySection = ({ showCta = true }: Props) => {
           {showCta && (
             <Link
               to="/galeria"
-              className="inline-flex bg-accent text-accent-foreground font-heading font-bold text-sm uppercase px-6 py-3 rounded-full hover:bg-accent-dark transition-colors shadow-lg shadow-accent/30 self-start md:self-auto"
+              className="inline-flex bg-primary-dark text-accent-foreground font-heading font-bold text-sm uppercase px-6 py-3 rounded-full hover:bg-primary-dark-dark transition-colors shadow-lg shadow-accent/30 self-start md:self-auto"
             >
               Ver todas las fotos
             </Link>
