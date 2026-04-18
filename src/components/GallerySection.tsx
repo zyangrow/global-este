@@ -22,7 +22,7 @@ const GallerySection = ({ showCta = true }: Props) => {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    <section id="galeria" className="py-20 md:py-28 bg-background">
+    <section id="galeria" className="py-20 md:py-28 bg-accent/10">
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
           <motion.div

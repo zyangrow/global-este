@@ -15,7 +15,7 @@ interface LegalLayoutProps {
 const LegalLayout = ({ title, children }: LegalLayoutProps) => (
   <>
     <Navbar />
-    <main className="pt-32 md:pt-40 pb-20 bg-background min-h-screen">
+    <main className="pt-32 md:pt-40 pb-20 bg-accent/10 min-h-screen">
       <div className="container max-w-3xl">
         <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 transition-colors">
           <ArrowLeft className="w-4 h-4" /> Volver al inicio
