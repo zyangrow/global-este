@@ -48,7 +48,7 @@ const GalleryPage = () => {
           </div>
         </section>
 
-        <section className="pb-20 bg-accent/10">
+        <section className="pb-20 bg-accent">
           <div className="container">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {allImages.map((img, i) => (

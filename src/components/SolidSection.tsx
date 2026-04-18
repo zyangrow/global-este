@@ -14,7 +14,7 @@ interface Props {
 const SolidSection = ({ children, className = "", id, tone = "white" }: Props) => (
   <section
     id={id}
-    className={`relative ${tone === "white" ? "bg-accent/10" : "bg-accent/15"} ${className}`}
+    className={`relative ${tone === "white" ? "bg-accent" : "bg-accent/15"} ${className}`}
   >
     {children}
   </section>
