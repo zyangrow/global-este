@@ -30,10 +30,10 @@ const GallerySection = ({ showCta = true }: Props) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block bg-primary/10 text-primary rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-3">
+            <span className="inline-block bg-white/15 backdrop-blur-sm text-white border border-white/25 rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-3">
               Galería
             </span>
-            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-foreground">
+            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white text-shadow-soft">
               Algunos de nuestros trabajos
             </h2>
           </motion.div>

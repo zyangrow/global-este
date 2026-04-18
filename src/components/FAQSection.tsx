@@ -26,10 +26,10 @@ const FAQSection = () => (
           viewport={{ once: true }}
           className="order-2 md:order-1"
         >
-          <span className="inline-block bg-primary/10 text-primary rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-3">
+          <span className="inline-block bg-white/15 backdrop-blur-sm text-white border border-white/25 rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-3">
             Resolvemos tus dudas
           </span>
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-foreground mb-8">
+          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white mb-8 text-shadow-soft">
             Preguntas frecuentes
           </h2>
           <Accordion type="single" collapsible className="space-y-3">
