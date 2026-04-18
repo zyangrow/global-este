@@ -40,7 +40,7 @@ const GallerySection = ({ showCta = true }: Props) => {
           {showCta && (
             <Link
               to="/galeria"
-              className="inline-flex bg-primary-dark text-accent-foreground font-heading font-bold text-sm uppercase px-6 py-3 rounded-full hover:bg-primary-dark-dark transition-colors shadow-lg shadow-accent/30 self-start md:self-auto"
+              className="inline-flex bg-accent text-accent-foreground font-heading font-bold text-sm uppercase px-6 py-3 rounded-full hover:bg-accent-dark transition-colors shadow-lg shadow-accent/30 self-start md:self-auto"
             >
               Ver todas las fotos
             </Link>

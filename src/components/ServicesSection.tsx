@@ -48,7 +48,7 @@ const ServicesSection = () => (
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/90 via-primary-dark/30 to-transparent" />
               <div className="absolute inset-0 p-4 md:p-5 flex items-end">
-                <div className="inline-flex items-center gap-2 bg-primary-dark text-accent-foreground rounded-full px-4 py-2 text-xs md:text-sm font-heading font-bold uppercase shadow-lg shadow-accent/40 group-hover:bg-primary-dark-dark transition-colors">
+                <div className="inline-flex items-center gap-2 bg-accent text-accent-foreground rounded-full px-4 py-2 text-xs md:text-sm font-heading font-bold uppercase shadow-lg shadow-accent/40 group-hover:bg-accent-dark transition-colors">
                   {s.title} <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </div>
