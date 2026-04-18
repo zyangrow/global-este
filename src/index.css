@@ -69,7 +69,11 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply text-foreground font-body antialiased;
+    background: transparent;
+  }
+  html {
+    background: hsl(var(--primary-dark));
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -119,6 +123,12 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .text-shadow-soft {
+    text-shadow: 0 2px 12px hsla(189, 60%, 10%, 0.45);
+  }
+  .btn-glow-accent {
+    box-shadow: 0 8px 28px -4px hsla(80, 41%, 47%, 0.55), 0 0 0 1px hsla(0, 0%, 100%, 0.08) inset;
   }
 }
 
