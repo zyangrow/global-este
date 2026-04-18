@@ -13,6 +13,7 @@ import PrivacyPage from "./pages/PrivacyPage.tsx";
 import CookiesPage from "./pages/CookiesPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
+import GlobalBackground from "./components/GlobalBackground.tsx";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <GlobalBackground />
       <BrowserRouter>
         <ScrollToTop />
         <Routes>

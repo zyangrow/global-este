@@ -11,7 +11,9 @@ const Footer = () => (
     <div className="container">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
         <div>
-          <img src={logo} alt={COMPANY.name} className="h-10 w-auto mb-4 brightness-0 invert" />
+          <div className="inline-block bg-white rounded-xl p-2 shadow-md mb-4">
+            <img src={logo} alt={COMPANY.name} className="h-9 w-auto block" />
+          </div>
           <p className="text-sm leading-relaxed mb-4">
             Climatización integral, calderas, aerotermia y eficiencia energética en Sevilla y alrededores.
           </p>
