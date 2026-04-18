@@ -1,36 +1,34 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import TrustSection from "@/components/TrustSection";
-import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
-import GallerySection from "@/components/GallerySection";
+import ServicesSection from "@/components/ServicesSection";
 import ReviewsSection from "@/components/ReviewsSection";
-import AreasSection from "@/components/AreasSection";
+import GallerySection from "@/components/GallerySection";
 import FAQSection from "@/components/FAQSection";
+import AreasSection from "@/components/AreasSection";
 import FinalCTA from "@/components/FinalCTA";
-import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import MobileCTA from "@/components/MobileCTA";
+import FloatingContactButton from "@/components/FloatingContactButton";
+import CookieBanner from "@/components/CookieBanner";
 
 const Index = () => (
   <>
     <Navbar />
     <main>
       <HeroSection />
-      <TrustSection />
-      <ServicesSection />
       <AboutSection />
-      <GallerySection />
+      <ServicesSection />
       <ReviewsSection />
-      <AreasSection />
+      <GallerySection />
       <FAQSection />
+      <AreasSection />
       <FinalCTA />
-      <ContactSection />
     </main>
     <Footer />
-    <WhatsAppButton />
+    <FloatingContactButton />
     <MobileCTA />
+    <CookieBanner />
   </>
 );
 
