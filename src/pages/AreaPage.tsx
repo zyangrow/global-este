@@ -52,7 +52,7 @@ const AreaPage = () => {
               </p>
               <div className="flex flex-wrap gap-3">
                 <QuoteDialog>
-                  <button className="bg-primary-dark text-accent-foreground font-heading font-bold text-base uppercase px-8 py-4 rounded-full hover:bg-primary-dark-dark transition-all btn-glow-accent">
+                  <button className="bg-accent text-accent-foreground font-heading font-bold text-base uppercase px-8 py-4 rounded-full hover:bg-accent-dark transition-all btn-glow-accent">
                     Pide Presupuesto
                   </button>
                 </QuoteDialog>
