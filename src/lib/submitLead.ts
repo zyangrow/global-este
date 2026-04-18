@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { WEBHOOK_URL } from "@/data/contact";
+import { WEBHOOK_URL_PRESUPUESTO, WEBHOOK_URL_CONTACTO } from "@/data/contact";
 
 export const leadSchema = z.object({
   name: z
@@ -32,7 +32,9 @@ export async function submitLead(
   data: Omit<LeadInput, "agreed">,
   formType: FormType,
 ): Promise<void> {
-  await fetch(WEBHOOK_URL, {
+  const endpoint =
+    formType === "contacto" ? WEBHOOK_URL_CONTACTO : WEBHOOK_URL_PRESUPUESTO;
+  await fetch(endpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     mode: "no-cors",
