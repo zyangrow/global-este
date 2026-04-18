@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { areas } from "@/data/areas";
 import { MAP_EMBED_SRC } from "@/data/contact";
-import ParallaxSection from "./ParallaxSection";
 
 const AreasSection = () => (
-  <ParallaxSection id="areas" className="py-20 md:py-28">
+  <section id="areas" className="py-20 md:py-28 bg-secondary/40">
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -14,13 +13,13 @@ const AreasSection = () => (
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <span className="inline-block bg-white/15 backdrop-blur-sm text-white border border-white/25 rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-3">
+        <span className="inline-block bg-primary/10 text-primary rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-3">
           Cobertura
         </span>
-        <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white mb-3 [text-shadow:0_2px_8px_rgba(0,0,0,0.2)]">
+        <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-foreground mb-3">
           Áreas de servicio
         </h2>
-        <p className="text-white/85 max-w-xl mx-auto">
+        <p className="text-muted-foreground max-w-xl mx-auto">
           Damos servicio en Sevilla, Huelva y alrededores.
         </p>
       </motion.div>
@@ -30,7 +29,7 @@ const AreasSection = () => (
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="rounded-3xl overflow-hidden shadow-2xl h-[420px] order-2 md:order-1 ring-1 ring-white/20"
+          className="rounded-3xl overflow-hidden shadow-2xl h-[420px] order-2 md:order-1"
         >
           <iframe
             src={MAP_EMBED_SRC}
@@ -55,9 +54,10 @@ const AreasSection = () => (
             >
               <Link
                 to={`/areas/${area.slug}`}
-                className="flex items-center gap-3 bg-card text-foreground rounded-2xl px-5 py-4 hover:bg-accent hover:text-accent-foreground transition-colors group shadow-lg"
+                className="flex items-center gap-3 bg-card rounded-2xl px-5 py-4 hover:bg-primary hover:text-primary-foreground transition-colors group shadow-card"
+                style={{ boxShadow: "var(--shadow-card)" }}
               >
-                <ArrowRight className="w-4 h-4 text-accent group-hover:text-accent-foreground flex-shrink-0" />
+                <ArrowRight className="w-4 h-4 text-accent group-hover:text-accent flex-shrink-0" />
                 <span className="font-heading font-semibold">{area.name}</span>
               </Link>
             </motion.div>
@@ -65,7 +65,7 @@ const AreasSection = () => (
         </div>
       </div>
     </div>
-  </ParallaxSection>
+  </section>
 );
 
 export default AreasSection;

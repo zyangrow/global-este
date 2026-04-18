@@ -11,7 +11,6 @@ import ReviewsSection from "@/components/ReviewsSection";
 import AreasSection from "@/components/AreasSection";
 import FinalCTA from "@/components/FinalCTA";
 import QuoteDialog from "@/components/QuoteDialog";
-import ParallaxSection from "@/components/ParallaxSection";
 import { services } from "@/data/services";
 import { COMPANY } from "@/data/contact";
 
@@ -70,9 +69,9 @@ const ServicePage = () => {
           </div>
         </section>
 
-        <ParallaxSection className="py-16 md:py-20">
+        <section className="py-16 md:py-20 bg-secondary/40">
           <div className="container">
-            <h2 className="font-heading font-extrabold text-2xl md:text-3xl text-white mb-8 text-center [text-shadow:0_2px_8px_rgba(0,0,0,0.2)]">
+            <h2 className="font-heading font-extrabold text-2xl md:text-3xl text-foreground mb-8 text-center">
               Beneficios
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
@@ -83,7 +82,8 @@ const ServicePage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
-                  className="bg-card rounded-2xl p-5 flex items-start gap-3 shadow-xl border border-white/30"
+                  className="bg-card rounded-2xl p-5 flex items-start gap-3 shadow-card border border-border/50"
+                  style={{ boxShadow: "var(--shadow-card)" }}
                 >
                   <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                   <span className="text-foreground font-medium">{b}</span>
@@ -91,7 +91,7 @@ const ServicePage = () => {
               ))}
             </div>
           </div>
-        </ParallaxSection>
+        </section>
 
         <section className="py-16 md:py-20 bg-background">
           <div className="container max-w-3xl">

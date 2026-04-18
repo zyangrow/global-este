@@ -12,7 +12,6 @@ import TermsPage from "./pages/TermsPage.tsx";
 import PrivacyPage from "./pages/PrivacyPage.tsx";
 import CookiesPage from "./pages/CookiesPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
-import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
 
@@ -22,7 +21,6 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/servicios/:slug" element={<ServicePage />} />
