@@ -20,7 +20,7 @@ const GlobalBackground = () => (
       className="absolute inset-0"
       style={{
         background:
-          "linear-gradient(180deg, hsla(189, 60%, 18%, 0.78) 0%, hsla(189, 53%, 28%, 0.70) 50%, hsla(189, 60%, 18%, 0.82) 100%)",
+          "linear-gradient(180deg, hsla(189, 60%, 18%, 0.55) 0%, hsla(189, 53%, 28%, 0.45) 50%, hsla(189, 60%, 18%, 0.60) 100%)",
       }}
     />
   </div>
