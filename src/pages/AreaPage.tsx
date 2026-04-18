@@ -1,12 +1,19 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Phone, CheckCircle, MapPin } from "lucide-react";
+import { ArrowLeft, ArrowRight, Phone, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import MobileCTA from "@/components/MobileCTA";
-import { areas } from "@/components/AreasSection";
-import { services } from "@/components/ServicesSection";
+import FloatingContactButton from "@/components/FloatingContactButton";
+import CookieBanner from "@/components/CookieBanner";
+import GallerySection from "@/components/GallerySection";
+import ReviewsSection from "@/components/ReviewsSection";
+import AreasSection from "@/components/AreasSection";
+import FinalCTA from "@/components/FinalCTA";
+import QuoteDialog from "@/components/QuoteDialog";
+import { areas } from "@/data/areas";
+import { services } from "@/data/services";
+import { COMPANY } from "@/data/contact";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const AreaPage = () => {
@@ -15,9 +22,12 @@ const AreaPage = () => {
 
   if (!area) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p>Área no encontrada</p>
-      </div>
+      <>
+        <Navbar />
+        <div className="min-h-screen flex items-center justify-center">
+          <p>Área no encontrada</p>
+        </div>
+      </>
     );
   }
 
@@ -25,73 +35,75 @@ const AreaPage = () => {
     <>
       <Navbar />
       <main>
-        <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+        <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
           <div className="absolute inset-0">
             <img src={heroBg} alt={area.name} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/90 to-primary-dark/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/90 via-primary-dark/70 to-primary-dark/40" />
           </div>
           <div className="container relative z-10">
-            <Link to="/#areas" className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-6 transition-colors">
+            <Link to="/" className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-6 transition-colors">
               <ArrowLeft className="w-4 h-4" /> Volver al inicio
             </Link>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <div className="flex items-center gap-3 mb-4">
-                <MapPin className="w-8 h-8 text-accent" />
-                <h1 className="font-heading font-black text-4xl md:text-5xl text-primary-foreground">
-                  Construcción en {area.name}
-                </h1>
+                <MapPin className="w-7 h-7 text-accent" />
+                <span className="text-accent font-heading font-bold uppercase tracking-wider text-sm">Área de servicio</span>
               </div>
-              <p className="text-primary-foreground/80 text-lg max-w-2xl">
-                Servicio profesional de construcción y electricidad en {area.name} y alrededores.
-                Presupuesto gratuito y sin compromiso.
+              <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-5 max-w-3xl leading-tight">
+                Climatización en {area.name}
+              </h1>
+              <p className="text-primary-foreground/90 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed">
+                {area.description}
               </p>
+              <div className="flex flex-wrap gap-3">
+                <QuoteDialog>
+                  <button className="bg-accent text-accent-foreground font-heading font-bold text-base uppercase px-8 py-4 rounded-full hover:bg-accent-dark transition-all shadow-xl shadow-accent/40">
+                    Pide Presupuesto
+                  </button>
+                </QuoteDialog>
+                <a href={`tel:${COMPANY.phoneTel}`} className="inline-flex items-center gap-2 border-2 border-primary-foreground/40 text-primary-foreground font-heading font-semibold px-7 py-4 rounded-full hover:bg-primary-foreground/10 transition-all">
+                  <Phone className="w-5 h-5" /> {COMPANY.phoneDisplay}
+                </a>
+              </div>
             </motion.div>
           </div>
-          <div className="absolute bottom-0 left-0 w-full">
-            <svg viewBox="0 0 1440 80" fill="none" className="w-full">
-              <path d="M0,40 C360,90 1080,0 1440,40 L1440,80 L0,80 Z" fill="hsl(210,20%,98%)" />
-            </svg>
-          </div>
         </section>
 
-        <section className="py-16 bg-background">
+        <section className="py-16 md:py-20 bg-background">
           <div className="container max-w-3xl">
-            <h2 className="font-heading font-black text-2xl md:text-3xl text-foreground mb-6">
-              Servicios de construcción en <span className="text-primary">{area.name}</span>
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              En Constructip ofrecemos todos nuestros servicios de construcción y electricidad profesional
-              en {area.name}. Con más de 15 años de experiencia, nuestro equipo se desplaza
-              hasta tu ubicación para reformar y mantener tu hogar en perfecto estado.
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              En Global E.S.T.E. ofrecemos todos nuestros servicios de climatización en {area.name}.
+              Con técnicos especializados y equipos de las mejores marcas, nos desplazamos a tu domicilio
+              para asesorarte e instalar el sistema más adecuado a tus necesidades.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Desde reformas integrales hasta instalaciones eléctricas de urgencia,
-              estamos preparados para cualquier reto. Solicita tu presupuesto gratuito y
-              descubre por qué somos la opción preferida en {area.name}.
+              Aire acondicionado, calderas, aerotermia, suelo radiante y placas solares: encuentra la
+              solución perfecta para tu hogar o negocio en {area.name}.
             </p>
           </div>
         </section>
 
-        <section className="py-16 bg-primary text-primary-foreground">
-          <div className="container max-w-3xl">
-            <h2 className="font-heading font-black text-2xl md:text-3xl mb-8">
-              Servicios disponibles en <span className="text-accent">{area.name}</span>
+        <section className="py-16 md:py-20 bg-secondary/40">
+          <div className="container">
+            <h2 className="font-heading font-extrabold text-2xl md:text-3xl text-foreground mb-10 text-center">
+              Servicios disponibles en <span className="text-primary">{area.name}</span>
             </h2>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
               {services.map((s, i) => (
                 <motion.div
                   key={s.slug}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
+                  transition={{ delay: (i % 6) * 0.06 }}
                 >
                   <Link
                     to={`/servicios/${s.slug}`}
-                    className="flex items-center gap-3 bg-primary-foreground/10 border border-primary-foreground/15 rounded-xl p-4 hover:bg-primary-foreground/20 transition-colors"
+                    className="flex items-center justify-between gap-3 bg-card rounded-2xl p-5 hover:bg-primary hover:text-primary-foreground transition-colors group shadow-card"
+                    style={{ boxShadow: "var(--shadow-card)" }}
                   >
-                    <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="font-medium">{s.title}</span>
+                    <span className="font-heading font-semibold">{s.title}</span>
+                    <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
                   </Link>
                 </motion.div>
               ))}
@@ -99,34 +111,15 @@ const AreaPage = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-background text-center">
-          <div className="container">
-            <h2 className="font-heading font-black text-3xl text-foreground mb-6">
-              ¿Necesitas un profesional en <span className="text-primary">{area.name}</span>?
-            </h2>
-            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              Contacta con nosotros y recibe un presupuesto personalizado sin compromiso.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="/#contacto"
-                className="inline-flex bg-accent text-accent-foreground font-heading font-bold text-base uppercase px-10 py-4 rounded-full hover:brightness-110 transition-all shadow-xl shadow-accent/40"
-              >
-                Pide Presupuesto Gratis
-              </a>
-              <a
-                href="tel:+34612345678"
-                className="inline-flex items-center gap-2 border-2 border-primary/30 text-primary font-heading font-semibold px-8 py-4 rounded-full hover:bg-primary/5 transition-all"
-              >
-                <Phone className="w-5 h-5" /> Llamar
-              </a>
-            </div>
-          </div>
-        </section>
+        <GallerySection />
+        <ReviewsSection />
+        <AreasSection />
+        <FinalCTA />
       </main>
       <Footer />
-      <WhatsAppButton />
+      <FloatingContactButton />
       <MobileCTA />
+      <CookieBanner />
     </>
   );
 };
