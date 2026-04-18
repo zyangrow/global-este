@@ -35,7 +35,9 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <img src={logo} alt={COMPANY.name} className="h-9 md:h-11 w-auto" />
+          <span className="inline-flex items-center bg-white rounded-full px-3 py-1.5 shadow-md">
+            <img src={logo} alt={COMPANY.name} className="h-7 md:h-9 w-auto" />
+          </span>
         </Link>
 
         <div className="hidden lg:flex items-center gap-7">

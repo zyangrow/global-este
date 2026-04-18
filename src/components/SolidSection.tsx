@@ -1,0 +1,23 @@
+import { ReactNode } from "react";
+
+/**
+ * Opaque white/light section that "covers" the global background.
+ * Use to alternate rhythm between transparent (background visible) and clean sections.
+ */
+interface Props {
+  children: ReactNode;
+  className?: string;
+  id?: string;
+  tone?: "white" | "muted";
+}
+
+const SolidSection = ({ children, className = "", id, tone = "white" }: Props) => (
+  <section
+    id={id}
+    className={`relative ${tone === "white" ? "bg-background" : "bg-secondary"} ${className}`}
+  >
+    {children}
+  </section>
+);
+
+export default SolidSection;

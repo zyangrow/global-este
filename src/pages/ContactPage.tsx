@@ -13,15 +13,15 @@ const ContactPage = () => (
   <>
     <Navbar />
     <main>
-      <section className="pt-32 md:pt-40 pb-12 bg-background">
-        <div className="container text-center">
-          <span className="inline-block bg-primary/10 text-primary rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-3">
+      <section className="relative pt-32 md:pt-40 pb-12">
+        <div className="container relative z-10 text-center">
+          <span className="inline-block bg-white/15 backdrop-blur-sm text-white border border-white/25 rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider mb-3">
             Estamos para ayudarte
           </span>
-          <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-foreground mb-4">
+          <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-white mb-4 text-shadow-soft">
             Contacto
           </h1>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-white/90 max-w-xl mx-auto text-shadow-soft">
             Llámanos, escríbenos o rellena el formulario y te respondemos lo antes posible.
           </p>
         </div>
