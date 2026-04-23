@@ -21,7 +21,7 @@ const AboutSection = () => (
           viewport={{ once: true }}
           className="overflow-hidden rounded-3xl shadow-2xl aspect-[4/5] max-w-md mx-auto md:mx-0"
         >
-          <img src={teamImg} alt="Nuestro equipo" loading="lazy" width={768} height={960} className="w-full h-full object-cover" />
+          <img src={teamImg} alt="Climatización en Sevilla — equipo Global ESTE" loading="lazy" width={768} height={960} className="w-full h-full object-cover" />
         </motion.div>
 
         <motion.div

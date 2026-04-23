@@ -19,7 +19,7 @@ const ContactPage = () => (
             Estamos para ayudarte
           </span>
           <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-white mb-4 text-shadow-soft">
-            Contacto
+            Contacto — Climatización en Sevilla
           </h1>
           <p className="text-white/90 max-w-xl mx-auto text-shadow-soft">
             Llámanos, escríbenos o rellena el formulario y te respondemos lo antes posible.
