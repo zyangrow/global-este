@@ -31,6 +31,11 @@ const ServicePage = () => {
 
   return (
     <>
+      <Seo
+        title={`${service.title} en Sevilla | ${COMPANY.name}`}
+        description={`${service.title} en Sevilla con ${COMPANY.name}. ${service.short} Presupuesto gratis en 24h.`}
+        jsonLd={localBusinessJsonLd}
+      />
       <Navbar />
       <main>
         <section className="relative pt-28 pb-20 md:pt-36 md:pb-28">
@@ -40,7 +45,7 @@ const ServicePage = () => {
             </Link>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-white mb-5 max-w-3xl leading-tight text-shadow-soft">
-                {service.title}
+                {service.title} en Sevilla
               </h1>
               <p className="text-white/95 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed text-shadow-soft">
                 {service.short}
