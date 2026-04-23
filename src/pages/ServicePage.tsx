@@ -11,6 +11,8 @@ import ReviewsSection from "@/components/ReviewsSection";
 import AreasSection from "@/components/AreasSection";
 import FinalCTA from "@/components/FinalCTA";
 import QuoteDialog from "@/components/QuoteDialog";
+import Seo from "@/components/Seo";
+import { localBusinessJsonLd } from "@/lib/seo";
 import { services } from "@/data/services";
 import { COMPANY } from "@/data/contact";
 
