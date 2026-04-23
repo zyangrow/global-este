@@ -16,10 +16,10 @@ const AreasSection = () => (
           Cobertura
         </span>
         <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white mb-3 text-shadow-soft">
-          Áreas de servicio
+          Climatización en toda Sevilla y alrededores
         </h2>
-        <p className="text-white/85 max-w-xl mx-auto text-shadow-soft">
-          {AREAS_DESCRIPTION}
+        <p className="text-white/85 max-w-2xl mx-auto text-shadow-soft">
+          Damos servicio en Sevilla Centro, Sevilla Este, Los Remedios, Triana, Nervión, Reina Mercedes y Huelva. {AREAS_DESCRIPTION}
         </p>
       </motion.div>
 

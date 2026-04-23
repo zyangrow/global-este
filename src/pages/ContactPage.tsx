@@ -7,10 +7,17 @@ import FloatingContactButton from "@/components/FloatingContactButton";
 import CookieBanner from "@/components/CookieBanner";
 import FinalCTA from "@/components/FinalCTA";
 import LeadForm from "@/components/LeadForm";
+import Seo from "@/components/Seo";
+import { localBusinessJsonLd } from "@/lib/seo";
 import { COMPANY, MAP_EMBED_SRC } from "@/data/contact";
 
 const ContactPage = () => (
   <>
+    <Seo
+      title="Contacto | Climatización en Sevilla — Global ESTE"
+      description="Contacta con Global ESTE en Sevilla. Presupuesto gratis de aire acondicionado, calderas y aerotermia en 24h. ☎ 607 11 29 27 — C. las Fuentesuelas 3, 41020 Sevilla."
+      jsonLd={localBusinessJsonLd}
+    />
     <Navbar />
     <main>
       <section className="relative pt-32 md:pt-40 pb-12">
@@ -19,7 +26,7 @@ const ContactPage = () => (
             Estamos para ayudarte
           </span>
           <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-white mb-4 text-shadow-soft">
-            Contacto
+            Contacto — Climatización en Sevilla
           </h1>
           <p className="text-white/90 max-w-xl mx-auto text-shadow-soft">
             Llámanos, escríbenos o rellena el formulario y te respondemos lo antes posible.

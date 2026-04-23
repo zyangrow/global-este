@@ -16,11 +16,10 @@ const ServicesSection = () => (
           Lo que hacemos
         </span>
         <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white mb-3 text-shadow-soft">
-          Nuestros servicios
+          Servicios de climatización en Sevilla
         </h2>
         <p className="text-white/85 max-w-xl mx-auto text-shadow-soft">
-          Soluciones integrales de climatización, eficiencia energética y
-          fontanería para tu hogar o negocio.
+          Aire acondicionado, calderas, aerotermia, calefacción, suelo radiante, placas solares, fontanería y técnico de gas en Sevilla y alrededores.
         </p>
       </motion.div>
 
@@ -40,7 +39,7 @@ const ServicesSection = () => (
             >
               <img
                 src={s.image}
-                alt={s.title}
+                alt={`${s.title} en Sevilla — Global ESTE`}
                 loading="lazy"
                 width={600}
                 height={750}
