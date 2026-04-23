@@ -17,7 +17,7 @@ const HeroSection = () => (
             {COMPANY.broadService} en {COMPANY.city}
           </span>
           <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.05] mb-6 text-shadow-soft">
-            {HERO.title}
+            Climatización en {COMPANY.city} | {COMPANY.name}
           </h1>
           <p className="text-white/95 text-lg md:text-xl max-w-lg mb-8 leading-relaxed text-shadow-soft">
             {HERO.description}
@@ -42,7 +42,7 @@ const HeroSection = () => (
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="lg:max-w-md lg:ml-auto w-full"
+          className="hidden lg:block lg:max-w-md lg:ml-auto w-full"
         >
           <QuoteForm />
         </motion.div>

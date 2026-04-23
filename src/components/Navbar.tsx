@@ -61,12 +61,12 @@ const Navbar = () => {
                   exit={{ opacity: 0, y: 8 }}
                   className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
                 >
-                  <div className="bg-card rounded-xl shadow-2xl p-2 w-64 border border-border/50">
+                  <div className="bg-primary-dark/80 backdrop-blur-xl rounded-xl shadow-2xl p-2 w-64 border border-white/15">
                     {services.map((s) => (
                       <Link
                         key={s.slug}
                         to={`/servicios/${s.slug}`}
-                        className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                        className="block px-4 py-2 text-sm text-primary-foreground hover:bg-white/10 hover:text-accent rounded-lg transition-colors"
                       >
                         {s.title}
                       </Link>
@@ -97,12 +97,12 @@ const Navbar = () => {
                   exit={{ opacity: 0, y: 8 }}
                   className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
                 >
-                  <div className="bg-card rounded-xl shadow-2xl p-2 w-60 border border-border/50">
+                  <div className="bg-primary-dark/80 backdrop-blur-xl rounded-xl shadow-2xl p-2 w-60 border border-white/15">
                     {areas.map((a) => (
                       <Link
                         key={a.slug}
                         to={`/areas/${a.slug}`}
-                        className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                        className="block px-4 py-2 text-sm text-primary-foreground hover:bg-white/10 hover:text-accent rounded-lg transition-colors"
                       >
                         {a.name}
                       </Link>
