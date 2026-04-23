@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, Clock } from "lucide-react";
 import logo from "@/assets/logo.png";
-import { COMPANY } from "@/data/contact";
+import { COMPANY, FOOTER_DESC } from "@/config/client";
 import { services } from "@/data/services";
 import { areas } from "@/data/areas";
 import ContactDialog from "./ContactDialog";
@@ -12,9 +12,7 @@ const Footer = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
         <div>
           <img src={logo} alt={COMPANY.name} className="h-10 w-auto mb-4 brightness-0 invert" />
-          <p className="text-sm leading-relaxed mb-4">
-            Climatización integral, calderas, aerotermia y eficiencia energética en Sevilla y alrededores.
-          </p>
+          <p className="text-sm leading-relaxed mb-4">{FOOTER_DESC}</p>
           <ContactDialog>
             <button className="bg-accent text-accent-foreground font-heading font-bold text-xs uppercase px-5 py-2.5 rounded-full hover:bg-accent-dark transition-colors">
               Contáctanos

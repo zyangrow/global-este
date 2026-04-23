@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { areas } from "@/data/areas";
-import { MAP_EMBED_SRC } from "@/data/contact";
+import { areas, AREAS_DESCRIPTION, COMPANY } from "@/config/client";
 
 const AreasSection = () => (
   <section id="areas" className="relative py-20 md:py-28">
@@ -20,30 +19,32 @@ const AreasSection = () => (
           Áreas de servicio
         </h2>
         <p className="text-white/85 max-w-xl mx-auto text-shadow-soft">
-          Damos servicio en Sevilla, Huelva y alrededores.
+          {AREAS_DESCRIPTION}
         </p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-8 items-stretch">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="rounded-3xl overflow-hidden shadow-2xl h-[420px] order-2 md:order-1 ring-1 ring-white/20"
-        >
-          <iframe
-            src={MAP_EMBED_SRC}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Mapa áreas de servicio"
-          />
-        </motion.div>
+        {COMPANY.mapEmbedSrc && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="rounded-3xl overflow-hidden shadow-2xl h-[420px] order-2 md:order-1 ring-1 ring-white/20"
+          >
+            <iframe
+              src={COMPANY.mapEmbedSrc}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Mapa áreas de servicio"
+            />
+          </motion.div>
+        )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 order-1 md:order-2 self-center">
+        <div className={`grid grid-cols-1 sm:grid-cols-2 gap-3 self-center ${COMPANY.mapEmbedSrc ? "order-1 md:order-2" : "md:col-span-2"}`}>
           {areas.map((area, i) => (
             <motion.div
               key={area.slug}

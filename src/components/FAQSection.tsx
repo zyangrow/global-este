@@ -5,16 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import faqImg from "@/assets/service-aire.jpg";
-
-const faqs = [
-  { q: "¿Cuánto tarda en darme un presupuesto?", a: "Respondemos en menos de 24h. En la mayoría de casos podemos dar una estimación el mismo día tras una breve visita o llamada." },
-  { q: "¿Trabajan con todas las marcas?", a: "Sí, somos servicio técnico autorizado de las principales marcas del mercado: Daikin, Mitsubishi, Vaillant, Saunier Duval, entre otras." },
-  { q: "¿Ofrecen mantenimiento anual?", a: "Sí. Disponemos de planes de mantenimiento anual para calderas, aire acondicionado y aerotermia con descuentos en piezas y mano de obra." },
-  { q: "¿Tramitan ayudas y subvenciones?", a: "Te ayudamos a tramitar las subvenciones disponibles para aerotermia, placas solares y rehabilitación energética." },
-  { q: "¿Hacen instalaciones para empresas?", a: "Sí. Realizamos instalaciones para particulares, comunidades de vecinos, oficinas y locales comerciales." },
-  { q: "¿Qué garantía dan en sus trabajos?", a: "Todas nuestras instalaciones tienen 2 años de garantía en mano de obra, además de la garantía oficial del fabricante en el equipo." },
-];
+import { faqs, faqSideImg } from "@/config/client";
 
 const FAQSection = () => (
   <section className="py-20 md:py-28 bg-primary-dark">
@@ -57,7 +48,7 @@ const FAQSection = () => (
           viewport={{ once: true }}
           className="order-1 md:order-2 sticky top-28 rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl"
         >
-          <img src={faqImg} alt="Equipo Global E.S.T.E." loading="lazy" className="w-full h-full object-cover" />
+          <img src={faqSideImg} alt="Nuestro equipo" loading="lazy" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
         </motion.div>
       </div>

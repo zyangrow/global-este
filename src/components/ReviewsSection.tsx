@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import { COMPANY } from "@/config/client";
 
 const ReviewsSection = () => (
   <section className="relative py-20 md:py-28">
@@ -43,7 +44,7 @@ const ReviewsSection = () => (
           ¿Has trabajado con nosotros? Tu opinión nos ayuda a seguir mejorando.
         </p>
         <a
-          href="https://g.page/r/global-este/review"
+          href={COMPANY.gmbReviewLink}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex bg-accent text-accent-foreground font-heading font-bold text-sm uppercase px-8 py-3.5 rounded-full hover:bg-accent-dark transition-colors btn-glow-accent"

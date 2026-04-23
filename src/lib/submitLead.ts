@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { WEBHOOK_URL_PRESUPUESTO, WEBHOOK_URL_CONTACTO } from "@/data/contact";
+import { AGENCY } from "@/config/client";
 
 export const leadSchema = z.object({
   name: z
@@ -32,21 +32,20 @@ export async function submitLead(
   data: Omit<LeadInput, "agreed">,
   formType: FormType,
 ): Promise<void> {
-  const endpoint =
-    formType === "contacto" ? WEBHOOK_URL_CONTACTO : WEBHOOK_URL_PRESUPUESTO;
-  await fetch(endpoint, {
+  await fetch(`${AGENCY.server}/lead`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Webhook-Secret": AGENCY.secret,
+    },
     body: JSON.stringify({
-      name: data.name.trim().slice(0, 100),
-      phone: data.phone.trim().slice(0, 20),
-      message: (data.message || "").trim().slice(0, 1000),
-      formType,
-      source: typeof window !== "undefined" ? window.location.href : "",
-      timestamp: new Date().toISOString(),
+      location_id: AGENCY.locationId,
+      form_type:   formType === "contacto" ? "contacta" : "presupuesto",
+      name:        data.name.trim().slice(0, 100),
+      phone:       data.phone.trim().slice(0, 20),
+      message:     (data.message ?? "").trim().slice(0, 1000),
     }),
   }).catch(() => {
-    /* swallow network errors so the user always sees a confirmation */
+    /* swallow network errors — el usuario siempre ve confirmación */
   });
 }

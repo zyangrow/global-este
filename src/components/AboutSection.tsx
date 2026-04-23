@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import teamImg from "@/assets/team.jpg";
+import { ABOUT } from "@/config/client";
 import QuoteDialog from "./QuoteDialog";
 
 const AboutSection = () => (
   <section className="relative py-20 md:py-28">
-    {/* Darker teal overlay specific to this section, on top of global background */}
     <div
       className="absolute inset-0 pointer-events-none"
       aria-hidden="true"
@@ -33,17 +33,13 @@ const AboutSection = () => (
             Sobre nosotros
           </span>
           <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-white mb-6 leading-tight text-shadow-soft">
-            Tu empresa de climatización de confianza en Sevilla
+            {ABOUT.title}
           </h2>
           <p className="text-white/90 text-lg leading-relaxed mb-4 text-shadow-soft">
-            En Global E.S.T.E. somos especialistas en climatización y eficiencia
-            energética. Llevamos años ayudando a familias y empresas a vivir y
-            trabajar con el mejor confort, ahorrando en su factura.
+            {ABOUT.body1}
           </p>
           <p className="text-white/85 leading-relaxed mb-8 text-shadow-soft">
-            Trabajamos con las marcas líderes del sector y ofrecemos garantía
-            total en cada instalación. Asesoramiento personalizado, presupuesto
-            cerrado y servicio postventa para que solo te preocupes de disfrutar.
+            {ABOUT.body2}
           </p>
           <QuoteDialog>
             <button className="bg-accent text-accent-foreground font-heading font-bold text-sm uppercase px-8 py-3.5 rounded-full hover:bg-accent-dark transition-colors btn-glow-accent">
