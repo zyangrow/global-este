@@ -1,8 +1,18 @@
-// Re-exports desde client.ts — no edites este archivo
-export { COMPANY, AGENCY } from "@/config/client";
-import { COMPANY } from "@/config/client";
-export const MAP_EMBED_SRC = COMPANY.mapEmbedSrc;
-// Legacy — ya no se usan (submitLead ahora usa el agency server)
-export const WEBHOOK_URL_PRESUPUESTO = "";
-export const WEBHOOK_URL_CONTACTO    = "";
-export const WEBHOOK_URL             = "";
+export const contact = {
+  "phone": "613 507 153",
+  "phoneFunctional": "+34613507153",
+  "email": "mejorclimacastellon@gmail.com",
+  "whatsapp": "+34613507153",
+  "facebook": "",
+  "instagram": "",
+  "schedule": {
+    "monday": "8:00 - 17:00",
+    "tuesday": "8:00 - 17:00",
+    "wednesday": "8:00 - 17:00",
+    "thursday": "8:00 - 17:00",
+    "friday": "8:00 - 17:00",
+    "saturday": "",
+    "sunday": ""
+  }
+};
+export default contact;
