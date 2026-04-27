@@ -1,3 +1,9 @@
-// Re-exports desde client.ts — no edites este archivo
-export type { Area } from "@/config/client";
-export { areas } from "@/config/client";
+export const areas = [
+  "Castellón",
+  "Burriana",
+  "Benicassim",
+  "Oropesa",
+  "Almassora",
+  "Vila-real"
+];
+export default areas;
