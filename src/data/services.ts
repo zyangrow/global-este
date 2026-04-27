@@ -1,3 +1,11 @@
-// Re-exports desde client.ts — no edites este archivo
-export type { Service } from "@/config/client";
-export { services } from "@/config/client";
+export const services = [
+  "Instalación de placas solares",
+  "Aerotermia",
+  "Suelo radiante",
+  "Calderas de gas y biomasa",
+  "Aire acondicionado",
+  "Mantenimiento de climatización",
+  "Reparación de calderas",
+  "Eficiencia energética del hogar"
+];
+export default services;
