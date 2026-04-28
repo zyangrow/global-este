@@ -58,19 +58,8 @@ const ReviewsSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-xl mx-auto bg-card rounded-3xl p-8 md:p-10 text-center shadow-2xl border border-white/20"
+          className="text-center"
         >
-          <div className="flex items-center justify-center gap-1 mb-4">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-6 h-6 fill-accent text-accent" />
-            ))}
-          </div>
-          <h3 className="font-heading font-extrabold text-xl md:text-2xl text-foreground mb-2">
-            Déjanos una reseña en Google
-          </h3>
-          <p className="text-muted-foreground mb-6">
-            ¿Has trabajado con nosotros? Tu opinión nos ayuda a seguir mejorando.
-          </p>
           <a
             href={COMPANY.gmbReviewLink}
             target="_blank"
