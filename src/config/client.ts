@@ -28,7 +28,7 @@ export const COMPANY = {
   hours:         import.meta.env.VITE_HOURS            ?? "8:00 a 18:00",
   broadService:  import.meta.env.VITE_BROAD_SERVICE    ?? "Climatización",
   gmbReviewLink: import.meta.env.VITE_GMB_REVIEW_LINK ?? "#",
-  mapEmbedSrc:   import.meta.env.VITE_MAP_EMBED_SRC   ?? "",
+  mapEmbedSrc:   import.meta.env.VITE_MAP_EMBED_SRC   ?? "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.0265549293686!2d-5.923677787561991!3d37.38920427196882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126f380e2528f1%3A0x201117144c3fac!2sGlobal%20Este!5e0!3m2!1ses!2ses!4v1777354612098!5m2!1ses!2ses",
 };
 
 // ── 2. Agency server — mismo para todos los clientes ─────────────────
