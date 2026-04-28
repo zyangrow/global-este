@@ -127,16 +127,29 @@ const Navbar = () => {
             {COMPANY.phoneDisplay}
           </a>
 
+          {/* Mobile CTAs: hidden until scrolled */}
+          <QuoteDialog>
+            <button
+              className={`md:hidden bg-accent text-accent-foreground font-heading font-extrabold text-xs uppercase tracking-wider px-3.5 py-2 rounded-full shadow-md transition-all duration-300 ${
+                scrolled ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-90 pointer-events-none"
+              }`}
+            >
+              Presupuesto
+            </button>
+          </QuoteDialog>
+
           <a
             href={`tel:${COMPANY.phoneTel}`}
-            className="md:hidden w-10 h-10 bg-card text-primary rounded-full flex items-center justify-center shadow-md"
+            className={`md:hidden w-10 h-10 bg-card text-primary rounded-full flex items-center justify-center shadow-md transition-all duration-300 ${
+              scrolled ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-90 pointer-events-none"
+            }`}
             aria-label="Llamar"
           >
             <Phone className="w-4 h-4" />
           </a>
 
           <QuoteDialog>
-            <button className="hidden sm:inline-flex bg-accent text-accent-foreground font-heading font-bold text-sm uppercase px-5 py-2.5 rounded-full hover:bg-accent-dark transition-all shadow-lg shadow-accent/30">
+            <button className="hidden md:inline-flex bg-accent text-accent-foreground font-heading font-bold text-sm uppercase px-5 py-2.5 rounded-full hover:bg-accent-dark transition-all shadow-lg shadow-accent/30">
               Presupuesto
             </button>
           </QuoteDialog>
